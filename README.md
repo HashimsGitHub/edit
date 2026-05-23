@@ -1,8 +1,8 @@
 # ![Application Icon for Edit](./assets/edit.svg) Edit
 
-A simple editor for simple needs.
+The Editor Ubuntu users really wanted but never had, thanks to Microsoft for resurrectiing this relic from the dead.
 
-This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar to VS Code. The goal is to provide an accessible editor that even users largely unfamiliar with terminals can easily use.
+This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar. The goal is to provide an accessible editor that even Ubuntu users largely unfamiliar with terminals can easily use.
 
 ![Screenshot of Edit with the About dialog in the foreground](./assets/edit_hero_image.png)
 
