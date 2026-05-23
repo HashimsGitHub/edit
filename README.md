@@ -19,6 +19,31 @@ You can install the latest version with WinGet:
 winget install Microsoft.Edit
 ```
 
+### Ubuntu / Debian (Snap)
+
+An unofficial snap package is available for Ubuntu and other Linux distributions that support Snap:
+
+```sh
+sudo snap install ms-edit
+ms-edit
+```
+
+> **Note:** The snap is published as `ms-edit` (rather than `msedit`) as that name was already taken on the Snap Store.
+> Snap Store page: [snapcraft.io/ms-edit](https://snapcraft.io/ms-edit)
+
+Alternatively, download the pre-built binary tarball from the [Linux Releases page](https://github.com/HashimsGitHub/edit/releases/tag/v2.0.0):
+
+```sh
+tar -xzf msedit-2.0.0-x86_64-linux.tar.gz
+sudo mv edit /usr/local/bin/msedit
+msedit
+```
+
+> Requires Ubuntu 22.04+ or Debian 12+ with `libicu74` installed:
+> ```sh
+> sudo apt install libicu74
+> ```
+
 ### Linux (build from source)
 
 If your distribution does not provide binaries, or if you'd like to build your own, you can use our install script, provided you have installed:
