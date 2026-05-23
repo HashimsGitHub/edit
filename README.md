@@ -6,13 +6,6 @@ This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/
 
 ![Screenshot of Edit with the About dialog in the foreground](./assets/edit_hero_image.png)
 
-## Installation
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/microsoft-edit.svg?exclude_unsupported=1)](https://repology.org/project/microsoft-edit/versions)
-
-You can also download binaries from [our Releases page](https://github.com/microsoft/edit/releases/latest).
-
-
 ### Ubuntu / Debian (Snap)
 
 An unofficial snap package is available for Ubuntu and other Linux distributions that support Snap:
@@ -25,77 +18,11 @@ ms-edit
 
 > Snap Store page: [snapcraft.io/ms-edit](https://snapcraft.io/ms-edit)
 
-Alternatively, download the pre-built binary tarball from the [Linux Releases page](https://github.com/HashimsGitHub/edit/releases/tag/v2.0.0):
-
-```sh
-tar -xzf msedit-2.0.0-x86_64-linux.tar.gz
-sudo mv edit /usr/local/bin/msedit
-msedit
-```
 
 > Requires Ubuntu 22.04+ or Debian 12+ with `libicu74` installed:
 > ```sh
 > sudo apt install libicu74
 > ```
-
-### Linux (build from source)
-
-If your distribution does not provide binaries, or if you'd like to build your own, you can use our install script, provided you have installed:
-* Rust (via `rustup` or similar)
-* A C compiler (e.g. `gcc`)
-* ICU (e.g. libicu78, libicu, icu)
-* curl/wget and tar
-
-The following command will then install `msedit` into `~/.local/bin`:
-```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/microsoft/edit/main/assets/install.sh | sh
-```
-
-Additional flags are `--dev`, to build directly from the main branch, and `--system` to install into `/usr/local/bin`. For instance:
-```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/microsoft/edit/main/assets/install.sh | sh -s -- --dev --system
-```
-
-### macOS
-
-You can install the latest version with Homebrew:
-```sh
-brew install msedit
-```
-
-## Build Instructions
-
-* [Install Rust](https://www.rust-lang.org/tools/install)
-* Clone the repository
-* If you're using nightly Rust:
-  ```sh
-  cargo build --release --config .cargo/release.toml
-  ```
-* If you're using stable Rust:
-  * Ideally: Set the environment variable `RUSTC_BOOTSTRAP=1` and use the **nightly** build instructions above.
-    This is recommended, because it drastically reduces the binary size and slightly improves performance.
-  * Otherwise, simply run:
-    ```sh
-    cargo build --release
-    ```
-
-### Build Configuration
-
-You can set the following environment variables at build-time to configure the build:
-
-Environment variable | Description
---- | ---
-`EDIT_CFG_ICU*` | See [ICU library name (SONAME)](#icu-library-name-soname) below for details. Linux package maintainers are advised to review and configure these options.
-`EDIT_CFG_LANGUAGES` | A comma-separated list of languages to include in the build. See [i18n/edit.toml](i18n/edit.toml) for available languages.
-
-## Notes to Package Maintainers
-
-### Package Naming
-
-The canonical executable name is "edit" and the alternative name is "msedit".
-We're aware of the potential conflict of "edit" with existing commands and recommend alternatively naming packages and executables "msedit".
-Names such as "ms-edit" should be avoided.
-Assigning an "edit" alias is recommended, if possible.
 
 ### ICU library name (SONAME)
 
