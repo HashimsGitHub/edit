@@ -12,12 +12,6 @@ This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/
 
 You can also download binaries from [our Releases page](https://github.com/microsoft/edit/releases/latest).
 
-### Windows
-
-You can install the latest version with WinGet:
-```powershell
-winget install Microsoft.Edit
-```
 
 ### Ubuntu / Debian (Snap)
 
@@ -27,8 +21,8 @@ An unofficial snap package is available for Ubuntu and other Linux distributions
 sudo snap install ms-edit
 ms-edit
 ```
+<img width="711" height="486" alt="image" src="https://github.com/user-attachments/assets/935fc30c-be32-4483-907d-987a30c6f78e" />
 
-> **Note:** The snap is published as `ms-edit` (rather than `msedit`) as that name was already taken on the Snap Store.
 > Snap Store page: [snapcraft.io/ms-edit](https://snapcraft.io/ms-edit)
 
 Alternatively, download the pre-built binary tarball from the [Linux Releases page](https://github.com/HashimsGitHub/edit/releases/tag/v2.0.0):
